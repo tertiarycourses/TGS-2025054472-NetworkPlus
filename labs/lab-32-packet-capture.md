@@ -1,14 +1,15 @@
-# Lab 32 — Packet Capture and Filtering with tcpdump and tshark
+# Lab 32 — Packet Capture and Filtering with tcpdump and the TIS PCAP Analyzer
 
-When ping and traceroute don’t find the answer, packet capture does. In this lab you will capture only DNS queries from one host, save them to a `.pcap`, then read them with tshark.
+When ping and traceroute don't find the answer, packet capture does. In this lab you will capture only DNS queries from one host, save them to a `.pcap`, then analyse the file in two ways: with `tshark` on the command line, and graphically in your browser using the **TIS PCAP Analyzer**.
 
-Run on https://killercoda.com/playgrounds/scenario/ubuntu
+**PCAP analyser (open in a browser tab):**
+👉 https://alfredang.github.io/pcapanalyzer/
+
+Run the Linux commands on https://killercoda.com/playgrounds/scenario/ubuntu
 
 **Required software (free, installed via apt):**
 - `tcpdump`
 - `tshark` (text Wireshark)
-
-> **Tip:** For graphical analysis on your laptop, install **Wireshark** (free) from https://www.wireshark.org and open the .pcap there.
 
 ---
 
@@ -62,20 +63,63 @@ tcpdump -nn -r /tmp/dns.pcap | head
 
 ---
 
-## Step 6 — Open in Wireshark for deep analysis
+## Step 6 — Download the .pcap to your laptop
 
-Copy the pcap to your laptop:
+In the Killercoda terminal, base64 the file so you can copy it through the browser:
 
 ```bash
 ls -lh /tmp/dns.pcap
-# scp it to your machine, then File → Open in Wireshark
+base64 /tmp/dns.pcap > /tmp/dns.pcap.b64
+cat /tmp/dns.pcap.b64
 ```
 
-In Wireshark, use the display filter `dns.qry.name == "example.com"`.
+Copy all the printed text into a file called `dns.pcap.b64` on your laptop, then decode it back:
+
+- macOS / Linux:
+  ```bash
+  base64 -d dns.pcap.b64 > dns.pcap
+  ```
+- Windows PowerShell:
+  ```powershell
+  [IO.File]::WriteAllBytes("dns.pcap", [Convert]::FromBase64String((Get-Content dns.pcap.b64 -Raw)))
+  ```
+
+(Or use `scp` if you have SSH access to the Killercoda VM.)
+
+---
+
+## Step 7 — Analyse the capture in the TIS PCAP Analyzer
+
+Open the analyser in a browser tab:
+
+```
+https://alfredang.github.io/pcapanalyzer/
+```
+
+Steps:
+
+1. Click **Upload PCAP** (or drag-and-drop `dns.pcap` onto the page).
+2. The tool will parse the file and show:
+   - A packet list with timestamps, source/destination IP, protocol and length.
+   - A protocol summary (e.g. DNS = 100%).
+   - Per-packet details — expand each row to see the Ethernet, IP, UDP, and DNS layers.
+3. Use the search/filter box to narrow down packets, e.g. `example.com` or `dns`.
+4. Confirm you see your three queries (`example.com`, `cloudflare.com`, `github.com`) and their replies.
+
+---
+
+## Step 8 — Quick analysis questions
+
+Using the analyser, answer:
+1. How many packets are in the capture?
+2. What is the **source port** of each DNS query? (Should be a high random ephemeral port.)
+3. What is the **destination port** of each query? (53)
+4. What **transaction ID** does each query share with its matching response?
+5. What **record type** (A, AAAA…) was requested?
 
 ---
 
 ## What you learned
-- The difference between a **capture filter** (BPF) and a **display filter** (Wireshark/tshark `-Y`).
+- The difference between a **capture filter** (BPF) and a **display filter** (`-Y` / web search box).
 - How to capture once and analyse many times by writing to a `.pcap`.
-- Where to download Wireshark for a graphical front-end.
+- How to use the **TIS PCAP Analyzer** at https://alfredang.github.io/pcapanalyzer/ for in-browser, no-install graphical analysis.

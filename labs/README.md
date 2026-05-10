@@ -62,7 +62,7 @@ No installs required on your own machine for the Killercoda labs — every packa
 | 29 | [ping, traceroute, mtr](lab-29-ping-traceroute-mtr.md) | `traceroute`, `mtr-tiny` (apt) |
 | 30 | [DNS Troubleshooting](lab-30-dns-troubleshooting.md) | `dnsutils` (apt) |
 | 31 | [ARP and Neighbour Table](lab-31-arp-neighbor.md) | `iputils-arping`, `ndisc6` (apt) |
-| 32 | [Packet Capture (tcpdump/tshark)](lab-32-packet-capture.md) | `tcpdump`, `tshark` (apt). 🖥 **Optional local download:** **Wireshark** from https://www.wireshark.org for graphical analysis on your laptop. |
+| 32 | [Packet Capture (tcpdump/tshark)](lab-32-packet-capture.md) | `tcpdump`, `tshark` (apt). 🌐 **Web tool** — TIS PCAP Analyzer: https://alfredang.github.io/pcapanalyzer/ |
 | 33 | [MTU and Path-MTU Discovery](lab-33-mtu-pmtud.md) | none extra |
 | 34 | [Routing Issues](lab-34-routing-issues.md) | none extra |
 | 35 | [Network Emulation with tc](lab-35-tc-network-emulation.md) | `iperf3` (apt) |

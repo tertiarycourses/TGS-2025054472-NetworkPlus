@@ -82,6 +82,6 @@ A complete set of **36 step-by-step labs** aligned to the CompTIA Network+ N10-0
 All tooling is **100% free**. The bulk runs inside the disposable Killercoda VM via `apt`. Two labs use software on your own machine:
 
 - **Lab 11 (Wireless)** — needs a real radio. Use WiFi Analyzer / Acrylic Wi-Fi (Win), wavemon+iw (Linux), or built-in Wireless Diagnostics (macOS).
-- **Lab 32 (Packet Capture)** — optional GUI analysis with **Wireshark** (https://www.wireshark.org).
+- **Lab 32 (Packet Capture)** — graphical analysis in your browser with the **TIS PCAP Analyzer** (https://alfredang.github.io/pcapanalyzer/).
 
 Full tool list: [labs/tools.md](labs/tools.md).

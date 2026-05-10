@@ -104,6 +104,7 @@ Killercoda playground (free, no signup): https://killercoda.com/playgrounds/scen
 ### B2. Packet capture / analysis (Lab 1, 6, 9, 32)
 | Tool | Type | Link |
 |------|------|------|
+| **TIS PCAP Analyzer** ⭐ used in Lab 32 | Web | https://alfredang.github.io/pcapanalyzer/ |
 | Wireshark | GUI Win/Mac/Linux | https://www.wireshark.org |
 | tshark | CLI bundled with Wireshark | — |
 | Npcap | Windows capture driver | https://npcap.com |
@@ -263,7 +264,7 @@ Killercoda playground (free, no signup): https://killercoda.com/playgrounds/scen
 | 29 | ping, traceroute, mtr |
 | 30 | dig, resolvectl |
 | 31 | arping, ndisc6, ip neigh |
-| 32 | tcpdump, tshark, Wireshark |
+| 32 | tcpdump, tshark, TIS PCAP Analyzer |
 | 33 | ping (-M do), ip link |
 | 34 | ip route get |
 | 35 | tc (netem, tbf), iperf3 |
