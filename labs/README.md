@@ -12,8 +12,8 @@ No installs required on your own machine for the Killercoda labs — every packa
 | # | Lab | Free software needed |
 |---|-----|----------------------|
 | 1 | [OSI Model Packet Inspection](lab-01-osi-packet-inspection.md) | `tcpdump`, `curl` (apt) |
-| 2 | [IPv4 Subnetting and CIDR](lab-02-ipv4-subnetting.md) | `ipcalc` (apt) |
-| 3 | [IPv6 Addressing and Link-Local](lab-03-ipv6-slaac.md) | none extra |
+| 2 | [IPv4 Subnetting and CIDR](lab-02-ipv4-subnetting.md) | 🌐 **Web tool** — TIS IP Calculator: https://alfredang.github.io/ipcalculator/ |
+| 3 | [IPv6 Addressing and Link-Local](lab-03-ipv6-slaac.md) | 🌐 **Web tool** — TIS IP Calculator: https://alfredang.github.io/ipcalculator/ |
 | 4 | [Common Ports and Protocols](lab-04-common-ports.md) | `nmap`, `net-tools` (apt) |
 | 5 | [DNS Record Types](lab-05-dns-records.md) | `dnsutils` (apt) |
 | 6 | [DHCP Lease Capture (DORA)](lab-06-dhcp-capture.md) | `isc-dhcp-client`, `tcpdump` (apt) |

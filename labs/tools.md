@@ -38,7 +38,7 @@ Killercoda playground (free, no signup): https://killercoda.com/playgrounds/scen
 | `iputils-arping` | `apt install iputils-arping` | ARP probe | 31 |
 | `ndisc6` | `apt install ndisc6` | IPv6 NDP probe | 31 |
 | `ethtool` | `apt install ethtool` | NIC link/duplex/counters | 28 |
-| `ipcalc` | `apt install ipcalc` | IPv4 subnet calculator | 2 |
+| TIS IP Calculator (web) | https://alfredang.github.io/ipcalculator/ | IPv4 + IPv6 subnet calculator (used in labs) | 2, 3 |
 | `nmap` | `apt install nmap` | Port scanner | 4, 25 |
 | `iperf3` | `apt install iperf3` | Throughput / jitter | 20, 35 |
 | `tc` + `sch_netem` | in `iproute2` | Latency / loss / bandwidth emulation | 35 |
@@ -91,6 +91,7 @@ Killercoda playground (free, no signup): https://killercoda.com/playgrounds/scen
 ### B1. Subnet & IP calculators (Lab 2, 3, 8, 12, 34)
 | Tool | Type | Link |
 |------|------|------|
+| **TIS IP Calculator** ⭐ used in Labs 2 & 3 | Web | https://alfredang.github.io/ipcalculator/ |
 | ipcalc | CLI | `apt install ipcalc` |
 | sipcalc | CLI (IPv6 too) | `apt install sipcalc` |
 | subnetcalc | CLI (IPv4+IPv6) | `apt install subnetcalc` |

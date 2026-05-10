@@ -1,18 +1,23 @@
 # Lab 2 — IPv4 Subnetting and CIDR
 
-In this lab you will take a single `/24` network and break it into four equal `/26` subnets. You will use the `ipcalc` utility to verify the math, then assign one of the resulting addresses to a virtual interface on Linux. Subnetting is one of the highest-weighted Network+ skills because every router, firewall, and cloud VPC requires correct CIDR planning.
+In this lab you will take a single `/24` network and break it into four equal `/26` subnets. You will use the **TIS IP Calculator** web tool to verify the math, then assign one of the resulting addresses to a virtual interface on Linux. Subnetting is one of the highest-weighted Network+ skills because every router, firewall, and cloud VPC requires correct CIDR planning.
 
-Run all commands on https://killercoda.com/playgrounds/scenario/ubuntu
+**Subnet calculator (open in a browser tab):**
+👉 https://alfredang.github.io/ipcalculator/
+
+Run the Linux commands on https://killercoda.com/playgrounds/scenario/ubuntu
 
 ---
 
-## Step 1 — Install ipcalc
+## Step 1 — Open the IP Calculator
 
-`ipcalc` is a small calculator that shows network, broadcast, host range, and netmask for any CIDR you give it.
+In a new browser tab, open:
 
-```bash
-apt update && apt install -y ipcalc
 ```
+https://alfredang.github.io/ipcalculator/
+```
+
+This is a free web-based subnet calculator — no install required. You will use it to confirm network/broadcast/host ranges for each CIDR in this lab.
 
 ---
 
@@ -20,11 +25,18 @@ apt update && apt install -y ipcalc
 
 Start with `192.168.10.0/24`. The `/24` means the first 24 bits identify the network and the last 8 bits identify hosts, giving 256 addresses total (254 usable).
 
-```bash
-ipcalc 192.168.10.0/24
+In the IP Calculator, enter:
+
+```
+IP / Prefix:  192.168.10.0/24
 ```
 
-Look at the **Network**, **HostMin**, **HostMax**, and **Broadcast** values.
+Then click **Calculate** and read off:
+- **Network address**
+- **Broadcast address**
+- **Usable host range** (HostMin → HostMax)
+- **Subnet mask** (255.255.255.0)
+- **Total / Usable hosts** (256 / 254)
 
 ---
 
@@ -32,12 +44,23 @@ Look at the **Network**, **HostMin**, **HostMax**, and **Broadcast** values.
 
 Adding two bits to the network portion (24 → 26) creates 4 subnets, each with 64 addresses (62 usable).
 
-```bash
-ipcalc 192.168.10.0/26
-ipcalc 192.168.10.64/26
-ipcalc 192.168.10.128/26
-ipcalc 192.168.10.192/26
+Use the calculator one at a time for each:
+
 ```
+192.168.10.0/26
+192.168.10.64/26
+192.168.10.128/26
+192.168.10.192/26
+```
+
+Fill in this table from the calculator output:
+
+| Subnet | Network | First Host | Last Host | Broadcast |
+|--------|---------|-----------|-----------|-----------|
+| 1 | 192.168.10.0 | 192.168.10.1 | 192.168.10.62 | 192.168.10.63 |
+| 2 | 192.168.10.64 | … | … | … |
+| 3 | 192.168.10.128 | … | … | … |
+| 4 | 192.168.10.192 | … | … | … |
 
 Verify each subnet has:
 - 64 total addresses
@@ -48,7 +71,7 @@ Verify each subnet has:
 
 ## Step 4 — Assign an IP from subnet 2 to your interface
 
-We will give your interface a secondary IP that sits inside `192.168.10.64/26`.
+Switch to the Killercoda terminal. We will give your interface a secondary IP that sits inside `192.168.10.64/26`.
 
 ```bash
 ip addr add 192.168.10.65/26 dev eth0 label eth0:1
@@ -77,6 +100,6 @@ ip addr del 192.168.10.65/26 dev eth0
 ---
 
 ## What you learned
-- How to verify subnet boundaries using `ipcalc`.
+- How to verify subnet boundaries using the **TIS IP Calculator** at https://alfredang.github.io/ipcalculator/
 - How a `/24` divides into four `/26` networks with 62 usable hosts each.
 - How to assign and remove a CIDR-formatted IP on Linux.
