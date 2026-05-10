@@ -1,5 +1,11 @@
 # TGS-2025054472 — CompTIA Network+ N10-009 Hands-On Labs
 
+> **Course:** WSQ — CompTIA Certified Network+ Training
+> **Course Code:** TGS-2025054472
+> **Register here:** https://www.tertiarycourses.com.sg/wsq-comptia-certified-network-training.html
+
+These are the official hands-on lab exercises for the WSQ CompTIA Certified Network+ Training course delivered by **Tertiary Infotech Pte Ltd**.
+
 A complete set of **36 step-by-step labs** aligned to the CompTIA Network+ N10-009 exam objectives. Every lab runs on the free **Killercoda Ubuntu Playground** (https://killercoda.com/playgrounds/scenario/ubuntu) — no local install required.
 
 ---
