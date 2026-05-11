@@ -187,6 +187,8 @@ Killercoda playground (free, no signup): https://killercoda.com/playgrounds/scen
 | SSL Labs Server Test | Web | https://www.ssllabs.com/ssltest |
 | testssl.sh | CLI script | https://testssl.sh |
 | Let's Encrypt + certbot | Free CA + client | https://letsencrypt.org |
+| **TIS Cryptography Toolkit** ⭐ | Web | https://alfredang.github.io/cryptography-toolkit/ |
+| **TIS Hash Generator** ⭐ | Web | https://alfredang.github.io/hashgenerator/ |
 
 ### B12. Monitoring / SNMP / NTP (Lab 15, 16, 17, 18)
 | Tool | Type | Link |
