@@ -2,7 +2,7 @@
 
 ---
 
-## **Lab** — Explore TCP Three-Way Handshake
+## **Lab** – Explore TCP Three-Way Handshake
 
 ### Objective
 Understand SYN, SYN-ACK, and ACK packets.
@@ -30,7 +30,6 @@ nc localhost 8080
 ```
 
 ### Verification
-
 Observe:
 - SYN
 - SYN-ACK
@@ -41,7 +40,7 @@ TCP establishes connections using a three-way handshake.
 
 ---
 
-## **Lab** — View Open Ports with netstat
+## **Lab** – View Open Ports with netstat
 
 ### Objective
 Identify listening ports.
@@ -61,7 +60,7 @@ netstat helps troubleshoot network services.
 
 ---
 
-## **Lab** — Configure a DHCP Server
+## **Lab** – Configure a DHCP Server
 
 ### Objective
 Install and configure ISC DHCP Server.
@@ -100,7 +99,7 @@ DHCP dynamically assigns IP addresses.
 
 ---
 
-## **Lab** — Configure DHCP Server Options
+## **Lab** – Configure DHCP Server Options
 
 ### Objective
 Configure DNS and gateway options.
@@ -132,7 +131,7 @@ DHCP options automate network configuration.
 
 ---
 
-## **Lab** — Create DHCP Exclusions
+## **Lab** – Create DHCP Exclusions
 
 ### Objective
 Reserve part of the IP range.
@@ -148,7 +147,6 @@ Keep:
 ```
 192.168.1.121–192.168.1.150
 ```
-
 for static devices.
 
 ### Verification
@@ -159,7 +157,7 @@ Exclusions prevent IP conflicts.
 
 ---
 
-## **Lab** — Create DHCP Client Reservations
+## **Lab** – Create DHCP Client Reservations
 
 ### Objective
 Assign fixed IPs using MAC addresses.
@@ -187,7 +185,7 @@ Reservations provide predictable addressing.
 
 ---
 
-## **Lab** — Configure Client Addressing for DHCP
+## **Lab** – Configure Client Addressing for DHCP
 
 ### Objective
 Enable DHCP on Ubuntu client.
@@ -207,7 +205,7 @@ DHCP clients request addressing dynamically.
 
 ---
 
-## **Lab** — Explore APIPA Addressing
+## **Lab** – Explore APIPA Addressing
 
 ### Objective
 Understand Automatic Private IP Addressing.
@@ -222,7 +220,6 @@ sudo dhclient
 ```
 
 ### Verification
-
 Client may receive:
 ```
 169.254.x.x
@@ -233,13 +230,12 @@ APIPA provides fallback addressing when DHCP fails.
 
 ---
 
-## **Lab** — Explore APIPA in Network Modeler
+## **Lab** – Explore APIPA in Network Modeler
 
 ### Objective
 Simulate DHCP failure scenarios.
 
 ### Activity
-
 - Disable DHCP server
 - Observe automatic APIPA assignment
 
@@ -251,7 +247,7 @@ APIPA is limited to local subnet communication.
 
 ---
 
-## **Lab** — Configure a DHCP Relay Agent
+## **Lab** – Configure a DHCP Relay Agent
 
 ### Objective
 Forward DHCP requests between subnets.
@@ -285,7 +281,7 @@ Relay agents enable centralized DHCP services.
 
 ---
 
-## **Lab** — Add DHCP Server on Another Subnet
+## **Lab** – Add DHCP Server on Another Subnet
 
 ### Objective
 Support multiple subnets.
@@ -312,7 +308,7 @@ DHCP can manage multiple subnet scopes.
 
 ---
 
-## **Lab** — Troubleshoot Address Pool Exhaustion
+## **Lab** – Troubleshoot Address Pool Exhaustion
 
 ### Objective
 Identify exhausted DHCP ranges.
@@ -331,5 +327,3 @@ sudo journalctl -u isc-dhcp-server
 
 ### Verification
 New clients fail to obtain IP addresses.
-
----
