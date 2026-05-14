@@ -1,4 +1,4 @@
-Lab 6.1 — Explore TCP Three-Way Handshake
+Lab -Explore TCP Three-Way Handshake
 Objective
 Understand SYN, SYN-ACK, and ACK packets.
 Commands
@@ -12,20 +12,15 @@ nc localhost 8080
 Verification
 Observe:
 
-
 SYN
-
-
 SYN-ACK
-
-
 ACK
 
 
 Key Learning Point
 TCP establishes connections using a three-way handshake.
 
-Lab 6.2 — View Open Ports with netstat
+Lab — View Open Ports with netstat
 Objective
 Identify listening ports.
 Commands
@@ -35,7 +30,7 @@ Check active TCP and UDP ports.
 Key Learning Point
 netstat helps troubleshoot network services.
 
-Lab 6.3 — Configure a DHCP Server
+Lab  — Configure a DHCP Server
 Objective
 Install and configure ISC DHCP Server.
 Commands
@@ -51,7 +46,7 @@ DHCP service should be active.
 Key Learning Point
 DHCP dynamically assigns IP addresses.
 
-Lab 6.4 — Configure DHCP Server Options
+Lab — Configure DHCP Server Options
 Objective
 Configure DNS and gateway options.
 Commands
@@ -66,7 +61,7 @@ Clients receive DNS and gateway information.
 Key Learning Point
 DHCP options automate network configuration.
 
-Lab 6.5 — Create DHCP Exclusions
+Lab  — Create DHCP Exclusions
 Objective
 Reserve part of the IP range.
 Commands
@@ -80,7 +75,7 @@ Excluded IPs are not assigned.
 Key Learning Point
 Exclusions prevent IP conflicts.
 
-Lab 6.6 — Create DHCP Client Reservations
+Lab — Create DHCP Client Reservations
 Objective
 Assign fixed IPs using MAC addresses.
 Commands
@@ -93,7 +88,7 @@ Reserved client receives fixed IP.
 Key Learning Point
 Reservations provide predictable addressing.
 
-Lab 6.7 — Configure Client Addressing for DHCP
+Lab  — Configure Client Addressing for DHCP
 Objective
 Enable DHCP on Ubuntu client.
 Commands
@@ -103,7 +98,7 @@ Client receives IP automatically.
 Key Learning Point
 DHCP clients request addressing dynamically.
 
-Lab 6.8 — Explore APIPA Addressing
+Lab  — Explore APIPA Addressing
 Objective
 Understand Automatic Private IP Addressing.
 Commands
@@ -115,7 +110,7 @@ Client may receive:
 Key Learning Point
 APIPA provides fallback addressing when DHCP fails.
 
-Lab 6.9 — Explore APIPA in Network Modeler
+Lab  — Explore APIPA in Network Modeler
 Objective
 Simulate DHCP failure scenarios.
 Activity
@@ -126,13 +121,12 @@ Disable DHCP server
 
 Observe automatic APIPA assignment
 
-
 Verification
 Devices communicate only locally.
 Key Learning Point
 APIPA is limited to local subnet communication.
 
-Lab 6.10 — Configure a DHCP Relay Agent
+Lab — Configure a DHCP Relay Agent
 Objective
 Forward DHCP requests between subnets.
 Commands
@@ -148,7 +142,7 @@ Relay forwards DHCP broadcasts.
 Key Learning Point
 Relay agents enable centralized DHCP services.
 
-Lab 6.11 — Add DHCP Server on Another Subnet
+Lab — Add DHCP Server on Another Subnet
 Objective
 Support multiple subnets.
 Commands
@@ -161,7 +155,7 @@ Clients on another subnet receive IPs.
 Key Learning Point
 DHCP can manage multiple subnet scopes.
 
-Lab 6.12 — Troubleshoot Address Pool Exhaustion
+Lab — Troubleshoot Address Pool Exhaustion
 Objective
 Identify exhausted DHCP ranges.
 Commands
@@ -172,5 +166,3 @@ sudo journalctl -u isc-dhcp-server
 Verification
 New clients fail to obtain IP addresses.
 
-Killercoda Ubuntu Playground
-You can directly launch the Ubuntu environment and perform all labs in-browser. 
