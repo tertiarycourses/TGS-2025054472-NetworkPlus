@@ -1,5 +1,7 @@
 # Implementing Network Services
 
+> **Lab Environment:** [Open Ubuntu Playground on Killercoda](https://killercoda.com/playgrounds/scenario/ubuntu)
+
 ---
 
 ## **Lab** – Explore TCP Three-Way Handshake
