@@ -16,7 +16,7 @@ The full WSQ courseware set for this 5-day course lives in [courseware/](coursew
 
 | Artifact | File |
 |----------|------|
-| **Slide deck** (384 slides, N10-009) | [courseware/CompTIA Network+ (N10-009)-v1.0.pptx](courseware/) |
+| **Slide deck** (384 slides, N10-009) | [courseware/CompTIA Network+ (N10-009)-v1.0.pptx](courseware/) · `.pdf` |
 | **Lesson Plan** (5-day schedule, slide-referenced) | [courseware/LP-CompTIA Network+ (N10-009).docx](courseware/) · `.pdf` |
 | **Learner Guide** (all 36 labs) | [courseware/LG-CompTIA Network+ (N10-009).docx](courseware/) · `.pdf` |
 | **Learner Guide (Markdown)** | [LG-CompTIA Network+ (N10-009).md](LG-CompTIA%20Network+%20(N10-009).md) |
