@@ -1,0 +1,12 @@
+# OS junk
+.DS_Store
+
+# WSQ assessment materials (confidential — never pushed)
+/assessment/
+/assessment\ /
+
+# Trainer master reference deck (90MB source, not a deliverable)
+WSQ - Dr. Alfred Ang - CompTIA Certified Network+ Training - v4.pptx
+
+# Playwright MCP
+.playwright-mcp/

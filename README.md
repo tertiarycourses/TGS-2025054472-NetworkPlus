@@ -10,6 +10,21 @@ A complete set of **36 step-by-step labs** aligned to the CompTIA Network+ N10-0
 
 ---
 
+## Courseware
+
+The full WSQ courseware set for this 5-day course lives in [courseware/](courseware/). Every artifact is generated from a single source, so the slide deck, Lesson Plan and Learner Guide stay 100% aligned with the 36 labs.
+
+| Artifact | File |
+|----------|------|
+| **Slide deck** (384 slides, N10-009) | [courseware/CompTIA Network+ (N10-009)-v1.0.pptx](courseware/) |
+| **Lesson Plan** (5-day schedule, slide-referenced) | [courseware/LP-CompTIA Network+ (N10-009).docx](courseware/) · `.pdf` |
+| **Learner Guide** (all 36 labs) | [courseware/LG-CompTIA Network+ (N10-009).docx](courseware/) · `.pdf` |
+| **Learner Guide (Markdown)** | [LG-CompTIA Network+ (N10-009).md](LG-CompTIA%20Network+%20(N10-009).md) |
+
+> **Note:** the confidential WSQ **assessment** materials (Written Assessment, Practical Performance and their answer keys) are intentionally **not** published to this repository.
+
+---
+
 ## How to use
 
 1. Open the Killercoda playground in your browser: https://killercoda.com/playgrounds/scenario/ubuntu
